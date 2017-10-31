@@ -1,3 +1,4 @@
+
 function friend(friends){
 
 	return outputArr = friends.filter(function(name){

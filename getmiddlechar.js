@@ -24,32 +24,16 @@ that you do not need to worry about your solution timing out.
 
 The middle character(s) of the word represented as a string.
 
-Test.describe("GetMiddle", function() {
-  Test.it("Tests", function() {
-    Test.assertEquals(getMiddle("test"),"es");
-    Test.assertEquals(getMiddle("testing"),"t");
-    Test.assertEquals(getMiddle("middle"),"dd");
-    Test.assertEquals(getMiddle("A"),"A");
-  });
-});
 
+function getMiddle(s)
+{
+  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+}
 */
 
 function getMiddle(s)
 {
-
-
- var outputStr = "";
-
- if(s.length % 2 == 0  ){
- 	outputStr = s.charAt((s.length-1)/2) + s.charAt((s.length)/2);
- 	alert(outputStr);
- }else{
- 	outputStr = s.charAt((s.length-1)/2);
- 	alert(outputStr);
- }
- 
-
+  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
 }
 
-getMiddle("abcefgh");
+

@@ -65,4 +65,4 @@ function animals(heads, legs){
 	}else{
 			return [chickens,cows];
 		}
-
+}

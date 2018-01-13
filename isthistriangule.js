@@ -5,5 +5,5 @@
 // (In this case, all triangles must have surface greater than 0 to be accepted).
 
 function isTriangle(a, b, c) {
-	return a + b > c && b + c > a && c + a > b ? true : false;
+	return a + b > c && b + c > a && c + a > b ;
 }

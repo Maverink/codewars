@@ -34,35 +34,27 @@
 // function comp(array1, array2) {
 // 	var output = [];
 
-// 	for (i = 0; i < array1.length; i++) {
-// 		for (j = 0; j < array2.length; j++) {
-// 			if (array1[i] % array2[j] == 0 ) {
-// 				output.push("x");
-// 				array2[j] = 0;
-// 				console.log(array2);
-// 				break;
-
-// 		}
-// 	}
-// 	console.log(output);
-// 	return output.length == array1.length ? true : false;
-// }
-
-// array1 = [44,0];
-// array2 = [1936,1];
-// comp(array1, array2);
-
 function comp(array1, array2) {
 	if (array1 == null || array2 == null) {
 		return false;
+	} else if (array1 == [] || array2 == []) {
+		return false;
+	} else {
+		var array3Str = array1
+			.map(x => x * x)
+			.sort()
+			.toString();
+		var array2Str = array2.sort().toString();
+
+		return array2Str == array3Str ? true : false;
 	}
-
-	const total1 = array1.map(x => x * x).reduce(function(a, b) {
-		return a + b;
-	}, 0);
-	const total2 = array2.reduce(function(a, b) {
-		return a + b;
-	}, 0);
-
-	return total1 == total2 ? true : false;
 }
+
+// comp(
+// 	[121, 144, 19, 161, 19, 144, 19, 11],
+// 	[1321, 14641, 20736, 361, 25921, 361, 20736, 361]
+// ); 
+
+// a1 = [121, 144, 19, 161, 19, 144, 19, 11];
+// a2 = [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19];
+// Test.assertEquals(comp(a1, a2), true);
